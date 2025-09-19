@@ -1,12 +1,14 @@
-export class TextArea {
+import {UIPaneComponent} from "./UIPaneComponent.js";
+
+export class TextArea extends UIPaneComponent{
     constructor() {
-        this.textAreaContainer = document.getElementById("textAreaContainer");
+        super("textAreaContainer");
     }
 
     renderTextAreaContainer() {
-        const container = document.createElement("div");
-        container.className = "col-12";
+        const containerBody = document.createElement("div");
+        containerBody.className = "col-12";
 
-        this.textAreaContainer.appendChild(container);
+        this.container.appendChild(containerBody);
     }
 }

@@ -1,13 +1,15 @@
-export class MenuBar {
+import {UIPaneComponent} from "./UIPaneComponent.js";
+
+export class MenuBar extends UIPaneComponent{
     constructor() {
-        this.menuBarContainer = document.getElementById("menuBarContainer");
+        super("menuBarContainer");
     }
 
     renderMenuBarContainer() {
-        const container = document.createElement("div");
-        container.className = "col-12";
-        container.innerHTML = "<h6>Editor 3 OOP</h6>"
+        const containerBody = document.createElement("div");
+        containerBody.className = "col-12";
+        containerBody.innerHTML = "<h6>Editor 3 OOP</h6>"
 
-        this.menuBarContainer.appendChild(container);
+        this.container.appendChild(containerBody);
     }
 }
