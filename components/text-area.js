@@ -1,6 +1,6 @@
-import {UIPaneComponent} from "./UIPaneComponent.js";
+import {AbstractUIPaneComponent} from "../abstract/AbstractUIPaneComponent.js";
 
-export class TextArea extends UIPaneComponent{
+export class TextArea extends AbstractUIPaneComponent{
     constructor() {
         super("textAreaContainer");
     }

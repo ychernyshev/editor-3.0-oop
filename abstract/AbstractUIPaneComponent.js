@@ -1,8 +1,8 @@
-export class UIPaneComponent {
+export class AbstractUIPaneComponent {
     constructor(containerID) {
         this.container = document.getElementById(containerID);
         if(!this.container) {
-            throw new Error(`Container with ID "${containerId}" not found`);
+            throw new Error(`Container with ID "${containerID}" not found`);
         }
     }
 

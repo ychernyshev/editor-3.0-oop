@@ -1,6 +1,6 @@
-import {UIPaneComponent} from "./UIPaneComponent.js";
+import {AbstractUIPaneComponent} from "../abstract/AbstractUIPaneComponent.js";
 
-export class MenuBar extends UIPaneComponent{
+export class MenuBar extends AbstractUIPaneComponent{
     constructor() {
         super("menuBarContainer");
     }
