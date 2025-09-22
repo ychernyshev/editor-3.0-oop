@@ -1,4 +1,4 @@
-import {AbstractUIPaneComponent} from "../abstract/AbstractUIPaneComponent.js";
+import {AbstractUIPaneComponent} from "./abstract/AbstractUIPaneComponent.js";
 
 export class MenuBar extends AbstractUIPaneComponent{
     constructor() {
@@ -7,8 +7,9 @@ export class MenuBar extends AbstractUIPaneComponent{
 
     renderMenuBarContainer() {
         const containerBody = document.createElement("div");
-        containerBody.className = "col-12";
-        containerBody.innerHTML = "<h6>Editor 3 OOP</h6>"
+        containerBody.style.height = "2rem";
+        containerBody.className = "col-1 bg-light text-center p-1";
+        containerBody.innerHTML = "<h6 class=''>Editor 3 OOP</h6>"
 
         this.container.appendChild(containerBody);
     }
