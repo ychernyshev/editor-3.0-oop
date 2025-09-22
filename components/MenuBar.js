@@ -7,10 +7,13 @@ export class MenuBar extends AbstractUIPaneComponent{
 
     renderMenuBarContainer() {
         const containerBody = document.createElement("div");
-        containerBody.style.height = "2rem";
-        containerBody.className = "col-1 bg-light text-center p-1";
+        containerBody.style.height = "2.5rem";
+        containerBody.className = "col-2 bg-light p-2 d-flex flex-row align-items-center";
+        containerBody.id = "menuItemsContainer";
         containerBody.innerHTML = "<h6 class=''>Editor 3 OOP</h6>"
 
         this.container.appendChild(containerBody);
     }
+
+
 }
