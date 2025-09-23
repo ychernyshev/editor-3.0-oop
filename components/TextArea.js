@@ -6,9 +6,24 @@ export class TextArea extends AbstractUIPaneComponent{
     }
 
     renderTextAreaContainer() {
-        const containerBody = document.createElement("div");
-        containerBody.className = "col-12";
+        this.container.className = "container";
 
-        this.container.appendChild(containerBody);
+        const row = document.createElement("div");
+        row.className = "row justify-content-center";
+
+        const col = document.createElement("div");
+        col.className = "col-9 mt-4";
+
+        const textarea = document.createElement("textarea");
+        textarea.className = "border rounded bg-light w-100";
+        textarea.style.padding = "1rem";
+        textarea.style.outline = "none";
+        textarea.style.height = "90vh";
+        textarea.setAttribute("contenteditable", "true");
+        // textarea.setAttribute("rows", "30");
+
+        col.appendChild(textarea);
+        row.appendChild(col);
+        this.container.appendChild(row);
     }
 }
