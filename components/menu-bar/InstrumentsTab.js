@@ -14,7 +14,7 @@ export class InstrumentsTab extends AbstractInstrumentsTab {
         tabPanel.setAttribute("role", "tabpanel");
         tabPanel.setAttribute("aria-labelledby", this.tabID);
         tabPanel.setAttribute("tabindex", "0");
-        tabPanel.innerHTML = this.tabID;
+        // tabPanel.innerHTML = this.tabID;
 
         this.tabContent.appendChild(tabPanel);
     }
