@@ -43,14 +43,26 @@ selectList.forEach(item => {
 
 // Font Weight Button
 const fontWeight = [
-    {"styleType": "fontWeight", "style": "bold", "sample": "A"},
-    {"styleType": "fontStyle", "style": "italic", "sample": "B"},
-    {"styleType": "textDecoration", "style": "underline", "sample": "C"},
-    {"styleType": "textDecoration", "style": "line-through", "sample": "Abc"},
+    {"styleType": "fontWeight", "style": "bold", "sample": "A", "code": ""},
+    {"styleType": "fontStyle", "style": "italic", "sample": "B", "code": ""},
+    {"styleType": "textDecoration", "style": "underline", "sample": "C", "code": ""},
+    {"styleType": "textDecoration", "style": "line-through", "sample": "Abc", "code": ""},
+    {"styleType": "text-align", "style": "left", "sample": "", "code": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-text-left\" viewBox=\"0 0 16 16\">\n" +
+            "  <path fill-rule=\"evenodd\" d=\"M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5\"/>\n" +
+            "</svg>"},
+    {"styleType": "text-align", "style": "center", "sample": "", "code": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-text-right\" viewBox=\"0 0 16 16\">\n" +
+            "  <path fill-rule=\"evenodd\" d=\"M6 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5\"/>\n" +
+            "</svg>"},
+    {"styleType": "text-align", "style": "right", "sample": "", "code": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-text-center\" viewBox=\"0 0 16 16\">\n" +
+            "  <path fill-rule=\"evenodd\" d=\"M4 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5\"/>\n" +
+            "</svg>"},
+    {"styleType": "text-align", "style": "justify", "sample": "", "code": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-justify\" viewBox=\"0 0 16 16\">\n" +
+            "  <path fill-rule=\"evenodd\" d=\"M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5\"/>\n" +
+            "</svg>"},
 ]
 
 fontWeight.forEach(style => {
-    const fontWrightButton = new InstrumentButton(style.styleType, style.style, style.sample);
+    const fontWrightButton = new InstrumentButton(style.styleType, style.style, style.sample, style.code);
     fontWrightButton.render();
 })
 
