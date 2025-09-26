@@ -3,6 +3,7 @@ import { TextArea } from '../components/TextArea.js';
 import { MenuBarSelectPanelButton } from '../components/buttons/MenuBarSelectPanelButton.js';
 import {InstrumentsTab} from "../components/menu-bar/InstrumentsTab.js";
 import {InstrumentSelect} from "../components/menu-bar/InstrumentSelect.js";
+import {InstrumentButton} from "../components/buttons/InstrumentButton.js";
 
 const menuBar = new MenuBar();
 const textArea = new TextArea();
@@ -40,5 +41,17 @@ selectList.forEach(item => {
     select.render();
 })
 
+// Font Weight Button
+const fontWeight = [
+    {"styleType": "fontWeight", "style": "bold", "sample": "A"},
+    {"styleType": "fontStyle", "style": "italic", "sample": "B"},
+    {"styleType": "textDecoration", "style": "underline", "sample": "C"},
+    {"styleType": "textDecoration", "style": "line-through", "sample": "Abc"},
+]
+
+fontWeight.forEach(style => {
+    const fontWrightButton = new InstrumentButton(style.styleType, style.style, style.sample);
+    fontWrightButton.render();
+})
 
 // Text Area Panel

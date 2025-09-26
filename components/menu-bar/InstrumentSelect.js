@@ -1,10 +1,9 @@
 import {AbstractInstrumentSelect} from "../buttons/AbstractInstrumentSelect.js";
 
 export class InstrumentSelect extends AbstractInstrumentSelect {
-    constructor(name, alt, value) {
+    constructor(name, value) {
         super();
         this.name = name;
-        this.alt = alt;
         this.value = value;
         this.homeTabPane = document.getElementById("home-tab-pane");
     }
@@ -13,6 +12,7 @@ export class InstrumentSelect extends AbstractInstrumentSelect {
         const select = document.createElement("select");
         select.setAttribute("name", this.name);
         select.id = this.name + "ID";
+        select.className = "form-control";
 
         this.value.forEach(val => {
             const option = document.createElement("option");
