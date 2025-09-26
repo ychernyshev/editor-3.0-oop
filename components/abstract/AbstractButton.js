@@ -1,10 +1,16 @@
 export class AbstractButton {
     constructor() {
-        this.button = null;
+        this.button = document.createElement("button");
     }
 
-    setButton(button) {
-        this.button = button;
+    setAttributes(attributes = {}) {
+        Object.entries(attributes).forEach(([key, value]) => {
+            if (key === "innerText") {
+                this.button.innerText = value;
+            } else {
+                this.button.setAttribute(key, value);
+            }
+        });
     }
 
     render() {

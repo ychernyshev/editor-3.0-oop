@@ -1,6 +1,6 @@
-import {AbstractButton} from "../abstract/AbstractButton.js";
+import {AbstractInstrumentSelect} from "../abstract/menu-bar/AbstractInstrumentSelect.js";
 
-export class ColorPickerButton extends AbstractButton {
+export class ColorPickerSelect extends AbstractInstrumentSelect {
     constructor(colour) {
         super();
         this.colour = colour;
@@ -20,7 +20,7 @@ export class ColorPickerButton extends AbstractButton {
             select.appendChild(option);
         })
 
-        this.setButton(select);
+        // this.setButton(select);
 
         container.appendChild(select);
     }

@@ -4,7 +4,7 @@ import {MenuBarSelectPanelButton} from '../components/buttons/MenuBarSelectPanel
 import {InstrumentsTab} from "../components/menu-bar/InstrumentsTab.js";
 import {InstrumentSelect} from "../components/menu-bar/InstrumentSelect.js";
 import {InstrumentButton} from "../components/buttons/InstrumentButton.js";
-import {ColorPickerButton} from "../components/buttons/ColorPickerButton.js";
+import {ColorPickerSelect} from "../components/menu-bar/ColorPickerSelect.js";
 
 const menuBar = new MenuBar();
 const textArea = new TextArea();
@@ -104,7 +104,7 @@ const colorPicker = [
 ]
 
 colorPicker.forEach(color => {
-    const picker = new ColorPickerButton(color.colour);
+    const picker = new ColorPickerSelect(color.colour);
     picker.render();
 })
 

@@ -14,19 +14,19 @@ export class MenuBarSelectPanelButton extends AbstractButton {
 
         this.container = document.getElementById("MyTabList");
 
-        const button = document.createElement("button");
-        button.className = "nav-link";
-        button.id = this.id;
-        button.innerText = this.name;
-        button.setAttribute("data-bs-toggle", "tab");
-        button.setAttribute("data-bs-target", "#" + this.id + "-pane");
-        button.setAttribute("type", "button");
-        button.setAttribute("role", "tab");
-        button.setAttribute("aria-controls", this.id + "-pane");
-        button.setAttribute("aria-selected", "true");
+        this.button.className = "nav-link";
+        this.setAttributes({
+            "id": this.id,
+            "innerText": this.name,
+            "data-bs-toggle": "tab",
+            "data-bs-target": "#" + this.id + "-pane",
+            "type": "button",
+            "role": "tab",
+            "aria-controls": this.id + "-pane",
+            "aria-selected": "true",
+        })
 
-        this.setButton(button);
-        buttonListItem.appendChild(button)
+        buttonListItem.appendChild(this.button)
         this.container.appendChild(buttonListItem);
     }
 }
