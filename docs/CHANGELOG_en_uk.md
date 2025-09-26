@@ -59,3 +59,67 @@ All notable changes to this project will be documented in this file.
 - Переписано кнопки вкладок для динамічного вибору та відображення відповідної панелі
 - Створення menuItemsContainer перенесено в метод render() для гарантії наявності DOM
 - Проведено дрібне очищення: видалено зайві пробіли, структурні правки
+
+---
+
+## [0.1.3] - 26.09.2025
+
+### ✨ Added
+
+- **Font Styling Buttons**:
+  - `Bold`, `Italic`, `Underline`, `Line-through` — implemented via `InstrumentButton` abstraction
+- **Text Alignment Buttons**:
+  - `Left`, `Center`, `Right`, `Justify` — rendered with SVG icons using the `code` property
+- **Color Picker Select Menu**:
+  - Dropdown menu with visual color options via `ColorPickerSelect`
+- **Font Family & Size Appearance**:
+  - Font family and size selectors now display actual styles
+  - Added new font sizes: `8px`, `10px`
+    
+
+### Improved
+
+- **Main Menu Buttons**:
+  - Introduced `code` property — buttons now render either text or SVG icon depending on `sample`/`code` length
+- **UI Stylization**:
+  - Unified styling for all buttons and selectors (`btn`, `form-control`, `text-secondary`)
+- **Font Selectors**:
+  - Enhanced visual feedback for font family and size dropdowns
+
+### Architecture
+
+- **AbstractButton**:
+  - Centralized button creation (`createElement("button")`) in base class
+  - Added `setAttributes()` method for DRY attribute management
+- **DRY Principle**:
+  - All buttons now inherit from `AbstractButton` — no duplicated logic
+
+### ✨ Додано
+
+- **Кнопки стилізації шрифтів**:
+  - `Bold`, `Italic`, `Underline`, `Line-through` — реалізовані через абстракцію `InstrumentButton`
+- **Кнопки вирівнювання тексту**:
+  - `Left`, `Center`, `Right`, `Justify` — з SVG-іконками через властивість `code`
+- **Меню вибору кольору**:
+  - Випадаючий список кольорів з візуалізацією через `ColorPickerSelect`
+- **Відображення шрифтів і розмірів**:
+  - Селектори `fontFamily` та `fontSize` тепер показують реальний стиль
+  - Додано нові розміри шрифтів: `8px`, `10px`
+
+### Покращено
+
+- **Кнопки головного меню**:
+  - Додано підтримку властивості `code` — кнопки можуть показувати текст або SVG-іконку залежно від `sample`/`code`
+- **Стилізація інтерфейсу**:
+  - Уніфіковано стилі для всіх кнопок і селекторів (`btn`, `form-control`, `text-secondary`)
+- **Селектори шрифтів**:
+  - Покращено візуальне відображення шрифтів і розмірів у меню
+
+### Архітектура
+
+- **AbstractButton**:
+  - Створення кнопки (`createElement("button")`) винесено в базовий клас
+  - Додано метод `setAttributes()` для централізованого управління атрибутами
+- **Принцип DRY**:
+  - Усі кнопки тепер наслідують `AbstractButton` — без дублювання логіки
+
