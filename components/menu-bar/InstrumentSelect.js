@@ -1,4 +1,4 @@
-import {AbstractInstrumentSelect} from "../buttons/AbstractInstrumentSelect.js";
+import {AbstractInstrumentSelect} from "../abstract/menu-bar/AbstractInstrumentSelect.js";
 
 export class InstrumentSelect extends AbstractInstrumentSelect {
     constructor(name, value) {
@@ -18,6 +18,8 @@ export class InstrumentSelect extends AbstractInstrumentSelect {
             const option = document.createElement("option");
             option.setAttribute("value", val);
             option.textContent = val;
+            option.style.fontFamily = val;
+            option.style.fontSize = val + "px";
             select.appendChild(option);
         });
 

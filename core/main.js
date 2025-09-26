@@ -33,7 +33,7 @@ tabPanels.forEach(tabID => {
 // Menu Bar Input
 const selectList = [
     {"name": "fonts", "alt": "Font Family", "value": ["Arial", "Geirgia", "Impact", "Tahoma", "Times New Roman", "Vardana"]},
-    {"name": "numbers", "alt": "Font Size", "value": [12, 14, 16, 18, 20, 22, 25, 30]},
+    {"name": "numbers", "alt": "Font Size", "value": [8, 10, 12, 14, 16, 18, 20, 22, 25, 30]},
 ]
 
 selectList.forEach(item => {
