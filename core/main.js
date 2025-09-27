@@ -2,9 +2,12 @@ import {MenuBar} from '../components/MenuBar.js';
 import {TextArea} from '../components/TextArea.js';
 import {MenuBarSelectPanelButton} from '../components/buttons/MenuBarSelectPanelButton.js';
 import {InstrumentsTab} from "../components/menu-bar/InstrumentsTab.js";
+// home-tab-pane
 import {InstrumentSelect} from "../components/menu-bar/InstrumentSelect.js";
 import {InstrumentButton} from "../components/buttons/InstrumentButton.js";
 import {ColorPickerSelect} from "../components/menu-bar/ColorPickerSelect.js";
+// insert-tab-pane
+import {TableCreator} from "../components/menu-bar/TableCreator.js";
 
 const menuBar = new MenuBar();
 const textArea = new TextArea();
@@ -107,5 +110,9 @@ colorPicker.forEach(color => {
     const picker = new ColorPickerSelect(color.colour);
     picker.render();
 })
+
+// insert-tab-pane
+const tableCreator = new TableCreator();
+tableCreator.render();
 
 // Text Area Panel
