@@ -18,16 +18,25 @@ export class TableCreator {
 
         const createTableButton = this.createTableButton();
 
-        createModalHeader.appendChild(createModalTitle);
+        const createTableBody = this.createTableBody();
+        const createTableTR = this.createTableTR();
+        const createTableTD = this.createTableTD();
+
         createModalHeader.appendChild(createCloseButton);
 
         createModalFooter.appendChild(createTableButton);
+        createModalHeader.appendChild(createModalTitle);
+
+        createTableBody.appendChild(createTableTR);
+        createTableTD.forEach(td => {
+            createTableTR.appendChild(td);
+        })
+
+        createModalBody.appendChild(createTableBody);
 
         modalContent.appendChild(createModalHeader);
         modalContent.appendChild(createModalBody);
         modalContent.appendChild(createModalFooter);
-
-
 
         modalDialog.appendChild(modalContent);
         modalContainer.appendChild(modalDialog);
@@ -123,8 +132,6 @@ export class TableCreator {
         modalBody.id = "modalBody";
 
         return modalBody;
-
-        // Table settings
     }
 
     createModalFooter() {
@@ -135,4 +142,30 @@ export class TableCreator {
         return modalFooter;
     }
 
+    // Table settings fields
+    createTableBody() {
+        const table = document.createElement("table")
+        table.className = "table";
+
+        return table;
+    }
+
+    createTableTR() {
+        return document.createElement("tr");
+    }
+
+    createTableTD() {
+        const fields = ["Count TR", "Count TD", "Width of TD", "Height of TD", "Width of border", "Style of border", "Color of border"];
+
+        return fields.map(field => {
+          const td = document.createElement("td");
+          td.innerText = field;
+
+          const input = document.createElement("input");
+          input.className = "form-control";
+
+          td.appendChild(input);
+          return td;
+        })
+    }
 }
