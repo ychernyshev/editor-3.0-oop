@@ -22,10 +22,10 @@ export class TableCreator {
         const createTableTR = this.createTableTR();
         const createTableTD = this.createTableTD();
 
+        createModalHeader.appendChild(createModalTitle);
         createModalHeader.appendChild(createCloseButton);
 
         createModalFooter.appendChild(createTableButton);
-        createModalHeader.appendChild(createModalTitle);
 
         createTableBody.appendChild(createTableTR);
         createTableTD.forEach(td => {

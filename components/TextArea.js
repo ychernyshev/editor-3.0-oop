@@ -1,6 +1,6 @@
 import {AbstractUIPaneComponent} from "./abstract/menu-bar/AbstractUIPaneComponent.js";
 
-export class TextArea extends AbstractUIPaneComponent{
+export class TextArea extends AbstractUIPaneComponent {
     constructor() {
         super("textAreaContainer");
     }
@@ -14,15 +14,15 @@ export class TextArea extends AbstractUIPaneComponent{
         const col = document.createElement("div");
         col.className = "col-9 mt-4";
 
-        const textarea = document.createElement("textarea");
-        textarea.className = "border rounded bg-light w-100";
-        textarea.style.padding = "1rem";
-        textarea.style.outline = "none";
-        textarea.style.height = "90vh";
-        textarea.setAttribute("contenteditable", "true");
-        // textarea.setAttribute("rows", "30");
+        const editableDiv = document.createElement("div");
+        editableDiv.setAttribute("contenteditable", "true");
+        editableDiv.id = "textArea";
+        editableDiv.className = "border rounded bg-light w-100";
+        editableDiv.style.padding = "1rem";
+        editableDiv.style.outline = "none";
+        editableDiv.style.height = "90vh";
 
-        col.appendChild(textarea);
+        col.appendChild(editableDiv);
         row.appendChild(col);
         this.container.appendChild(row);
     }

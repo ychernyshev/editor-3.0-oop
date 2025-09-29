@@ -2,12 +2,19 @@ import {MenuBar} from '../components/MenuBar.js';
 import {TextArea} from '../components/TextArea.js';
 import {MenuBarSelectPanelButton} from '../components/buttons/MenuBarSelectPanelButton.js';
 import {InstrumentsTab} from "../components/menu-bar/InstrumentsTab.js";
+
 // home-tab-pane
 import {InstrumentSelect} from "../components/menu-bar/InstrumentSelect.js";
 import {InstrumentButton} from "../components/buttons/InstrumentButton.js";
 import {ColorPickerSelect} from "../components/menu-bar/ColorPickerSelect.js";
+
 // insert-tab-pane
 import {TableCreator} from "../components/menu-bar/TableCreator.js";
+
+
+// Commands
+import {FontFamilyCommand} from "./commands/FontFamilyCommand.js";
+import {FontSizeCommand} from "./commands/FontSizeCommand.js";
 
 const menuBar = new MenuBar();
 const textArea = new TextArea();
@@ -114,5 +121,22 @@ colorPicker.forEach(color => {
 // insert-tab-pane
 const tableCreator = new TableCreator();
 tableCreator.render();
+
+// Commands
+// Font Size & Font Family
+const fontSelect = document.getElementById("fontsID");
+const fontSizeSelect = document.getElementById("numbersID");
+const textAreaElement = document.getElementById("textArea");
+
+const fontFamilyCommand = new FontFamilyCommand(textAreaElement);
+const fontSizeCommand = new FontSizeCommand(textAreaElement);
+
+fontSelect.addEventListener("change", (e) => {
+    fontFamilyCommand.execute(e.target.value);
+});
+
+fontSizeSelect.addEventListener("change", (e) => {
+    fontSizeCommand.execute(e.target.value);
+});
 
 // Text Area Panel
