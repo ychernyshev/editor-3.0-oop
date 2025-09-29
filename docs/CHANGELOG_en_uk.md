@@ -123,3 +123,26 @@ All notable changes to this project will be documented in this file.
 - **Принцип DRY**:
   - Усі кнопки тепер наслідують `AbstractButton` — без дублювання логіки
 
+---
+
+## [v0.1.4] - 2025-09-29
+
+### Added
+- Create table form integrated into `TableCreate.js`
+- `InstrumentSelect` components for font family and font size selection
+- `FontFamilyCommand` and `FontSizeCommand` classes to apply styles to editable content
+- Event listeners connecting select inputs to command execution logic
+
+### Changed
+- Replaced `textarea` with `div` container using `contenteditable` attribute for richer text editing
+
+---
+
+### Додано
+- Форма створення таблиці інтегрована в `TableCreate.js`
+- Компоненти `InstrumentSelect` для вибору шрифту та розміру тексту
+- Класи `FontFamilyCommand` і `FontSizeCommand` для застосування стилів до редагованого контенту
+- Обробники подій, що зв’язують селекти з логікою виконання команд
+
+### Змінено
+- Замість `textarea` використано контейнер `div` з атрибутом `contenteditable` для розширеного редагування тексту
