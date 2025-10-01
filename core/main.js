@@ -18,6 +18,7 @@ import {FontSizeCommand} from "./commands/FontSizeCommand.js";
 import {BoldCommand} from "./commands/BoldCommand.js";
 import {ItalicCommand} from "./commands/ItalicCommand.js";
 import {UnderlineCommand} from "./commands/UnderlineCommand.js";
+import {LineThroughCommand} from "./commands/LineThroughCommand.js";
 
 const menuBar = new MenuBar();
 const textArea = new TextArea();
@@ -175,7 +176,28 @@ underlineButton.addEventListener("click", () => {
     if (targetElement.style.textDecoration !== "underline") {
         underlineCommand.execute("underline");
     } else {
-        targetElement.style.textDecoration = "normal";
+        targetElement.style.textDecoration = "none";
+    }
+})
+
+// Line Thought Command
+const lineThroughButton = document.getElementById("line-throughButtonID");
+const lineThroughCommand = new LineThroughCommand(targetElement);
+
+lineThroughButton.addEventListener("click", () => {
+    const current = targetElement.style.textDecoration;
+
+    const hasUnderline = current.includes("underline");
+    const hasLineThrough = current.includes("line-through");
+
+    if (!hasLineThrough && !hasUnderline) {
+        lineThroughCommand.execute("line-through");
+    } else if (!hasLineThrough && hasUnderline) {
+        lineThroughCommand.execute("underline line-through");
+    } else if (hasLineThrough && hasUnderline) {
+        lineThroughCommand.execute("underline");
+    } else {
+        lineThroughCommand.execute("none");
     }
 })
 
