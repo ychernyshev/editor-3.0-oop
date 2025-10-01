@@ -5,7 +5,7 @@ export class ItalicCommand {
 
     execute(fontStyleItalic) {
         if(this.target) {
-            this.target.style.fontStyle = "italic";
+            this.target.style.fontStyle = fontStyleItalic;
         }
     }
 }

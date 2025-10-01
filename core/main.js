@@ -17,6 +17,7 @@ import {FontFamilyCommand} from "./commands/FontFamilyCommand.js";
 import {FontSizeCommand} from "./commands/FontSizeCommand.js";
 import {BoldCommand} from "./commands/BoldCommand.js";
 import {ItalicCommand} from "./commands/ItalicCommand.js";
+import {UnderlineCommand} from "./commands/UnderlineCommand.js";
 
 const menuBar = new MenuBar();
 const textArea = new TextArea();
@@ -142,12 +143,12 @@ fontSizeSelect.addEventListener("change", (e) => {
 });
 
 // Font Weight
-const boldButton  = document.getElementById("boldButtonID");
+const boldButton = document.getElementById("boldButtonID");
 const targetElement = document.getElementById("textArea");
 const boldCommand = new BoldCommand(targetElement);
 
-boldButton .addEventListener("click", () => {
-    if(targetElement.style.fontWeight !== "bold") {
+boldButton.addEventListener("click", () => {
+    if (targetElement.style.fontWeight !== "bold") {
         boldCommand.execute("bold");
     } else {
         targetElement.style.fontWeight = "normal";
@@ -159,7 +160,7 @@ const italicButton = document.getElementById("italicButtonID");
 const italicCommand = new ItalicCommand(targetElement);
 
 italicButton.addEventListener("click", () => {
-    if(targetElement.style.fontStyle !== "italic") {
+    if (targetElement.style.fontStyle !== "italic") {
         italicCommand.execute("italic");
     } else {
         targetElement.style.fontStyle = "normal";
@@ -167,5 +168,15 @@ italicButton.addEventListener("click", () => {
 })
 
 // Font Style Underline
+const underlineButton = document.getElementById("underlineButtonID");
+const underlineCommand = new UnderlineCommand(targetElement);
+
+underlineButton.addEventListener("click", () => {
+    if (targetElement.style.textDecoration !== "underline") {
+        underlineCommand.execute("underline");
+    } else {
+        targetElement.style.textDecoration = "normal";
+    }
+})
 
 // Text Area Panel
