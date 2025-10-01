@@ -14,6 +14,7 @@ export class InstrumentButton extends AbstractButton {
 
         this.button.className = "btn tbn-light border";
         this.button.style[this.styleType] = this.style;
+        this.button.id = this.style + "buttonID";
         if(this.sample.length !== 0) {
             this.button.textContent = this.sample;
         }

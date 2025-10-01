@@ -15,6 +15,7 @@ import {TableCreator} from "../components/menu-bar/TableCreator.js";
 // Commands
 import {FontFamilyCommand} from "./commands/FontFamilyCommand.js";
 import {FontSizeCommand} from "./commands/FontSizeCommand.js";
+import {BoldCommand} from "./commands/BoldCommand.js";
 
 const menuBar = new MenuBar();
 const textArea = new TextArea();
@@ -138,5 +139,18 @@ fontSelect.addEventListener("change", (e) => {
 fontSizeSelect.addEventListener("change", (e) => {
     fontSizeCommand.execute(e.target.value);
 });
+
+// Font Weight
+const boldButton  = document.getElementById("boldbuttonID");
+const targetElement = document.getElementById("textArea");
+const boldCommand = new BoldCommand(targetElement);
+
+boldButton .addEventListener("click", () => {
+    if(targetElement.style.fontWeight !== "bold") {
+        boldCommand.execute("bold");
+    } else {
+        targetElement.style.fontWeight = "normal";
+    }
+})
 
 // Text Area Panel
