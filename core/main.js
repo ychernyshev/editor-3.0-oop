@@ -19,6 +19,7 @@ import {BoldCommand} from "./commands/BoldCommand.js";
 import {ItalicCommand} from "./commands/ItalicCommand.js";
 import {UnderlineCommand} from "./commands/UnderlineCommand.js";
 import {LineThroughCommand} from "./commands/LineThroughCommand.js";
+import {TextLeftCommand} from "./commands/TextLeftCommand.js";
 
 const menuBar = new MenuBar();
 const textArea = new TextArea();
@@ -208,6 +209,14 @@ lineThroughButton.addEventListener("click", () => {
     } else {
         lineThroughCommand.execute("none");
     }
+})
+
+// Text Left Command
+const textLeftButton = document.getElementById("leftButtonID");
+const textLeftCommand = new TextLeftCommand(targetElement);
+
+textLeftButton.addEventListener("click", () => {
+    textLeftCommand.execute("left");
 })
 
 // Text Area Panel
