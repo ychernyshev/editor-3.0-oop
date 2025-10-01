@@ -16,6 +16,7 @@ import {TableCreator} from "../components/menu-bar/TableCreator.js";
 import {FontFamilyCommand} from "./commands/FontFamilyCommand.js";
 import {FontSizeCommand} from "./commands/FontSizeCommand.js";
 import {BoldCommand} from "./commands/BoldCommand.js";
+import {ItalicCommand} from "./commands/ItalicCommand.js";
 
 const menuBar = new MenuBar();
 const textArea = new TextArea();
@@ -141,7 +142,7 @@ fontSizeSelect.addEventListener("change", (e) => {
 });
 
 // Font Weight
-const boldButton  = document.getElementById("boldbuttonID");
+const boldButton  = document.getElementById("boldButtonID");
 const targetElement = document.getElementById("textArea");
 const boldCommand = new BoldCommand(targetElement);
 
@@ -152,5 +153,19 @@ boldButton .addEventListener("click", () => {
         targetElement.style.fontWeight = "normal";
     }
 })
+
+// Font Style Italic
+const italicButton = document.getElementById("italicButtonID");
+const italicCommand = new ItalicCommand(targetElement);
+
+italicButton.addEventListener("click", () => {
+    if(targetElement.style.fontStyle !== "italic") {
+        italicCommand.execute("italic");
+    } else {
+        targetElement.style.fontStyle = "normal";
+    }
+})
+
+// Font Style Underline
 
 // Text Area Panel
