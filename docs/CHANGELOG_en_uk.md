@@ -146,3 +146,40 @@ All notable changes to this project will be documented in this file.
 
 ### Змінено
 - Замість `textarea` використано контейнер `div` з атрибутом `contenteditable` для розширеного редагування тексту
+
+---
+
+## [v0.1.5] - 2025-10-01
+
+### Added
+- `font-weight: bold` toggle functionality to `InstrumentButton`
+- `font-style: italic` toggle functionality to `InstrumentButton`
+- `text-decoration: underline` toggle functionality to `InstrumentButton`
+- `text-decoration: line-through` toggle functionality to `InstrumentButton`
+- `text-align: left` toggle functionality to `InstrumentButton`
+- `text-align: center` toggle functionality to `InstrumentButton`
+- `text-align: right` toggle functionality to `InstrumentButton`
+- `text-align: justify` toggle functionality to `InstrumentButton`
+- Formatting text toggle functionality to `InstrumentButton`
+
+### Fixed & Changed
+- Fixed a bug with `text-decoration` property: changed from `"normal"` to `"none"`
+- Refined logic: now the command checks if `text-decoration` includes `"line-through"`. If selected, it toggles `"underline"` independently, while `"line-through"` remains active. "line-through" сontrol is delegated to `LineThroughCommand`
+- Enabled word wrapping in `TextArea`
+
+
+### Додано
+- перемикач `font-weight: bold` до `InstrumentButton`
+- перемикач `font-style: italic` до `InstrumentButton`
+- перемикач `text-decoration: underline` до `InstrumentButton`
+- перемикач `text-decoration: line-through` до `InstrumentButton`
+- перемикач `text-align: left` до `InstrumentButton`
+- перемикач `text-align: center` до `InstrumentButton`
+- перемикач `text-align: right` до `InstrumentButton`
+- перемикач `text-align: justify` до `InstrumentButton`
+- перемикач форматування тексту до `InstrumentButton`
+
+### Змінено та виправлено
+- Виправлено баг у властивості `text-decoration`: замінено `"normal"` на `"none"`
+- Уточнено логіку: тепер команда перевіряє, чи містить `text-decoration` `"line-through"`. Якщо так — `"underline"` додається або видаляється окремо, а `"line-through"` залишається активним. Відповідальність за `"line-through"` делеговано до `LineThroughCommand`
+- Увімкнено перенесення слів у `TextArea`
