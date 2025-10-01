@@ -21,6 +21,7 @@ import {UnderlineCommand} from "./commands/UnderlineCommand.js";
 import {LineThroughCommand} from "./commands/LineThroughCommand.js";
 import {TextLeftCommand} from "./commands/TextLeftCommand.js";
 import {TextCenterCommand} from "./commands/TextCenterCommand.js";
+import {TextRightCommand} from "./commands/TextRightCommand.js";
 
 const menuBar = new MenuBar();
 const textArea = new TextArea();
@@ -226,6 +227,14 @@ const textCenterCommand = new TextCenterCommand(targetElement);
 
 textCenterButton.addEventListener("click", () => {
     textCenterCommand.execute("center");
+})
+
+// Text Right Command
+const textRightButton = document.getElementById("rightButtonID");
+const textRightCommand = new TextRightCommand(targetElement);
+
+textRightButton.addEventListener("click", () => {
+    textRightCommand.execute("right");
 })
 
 // Text Area Panel
