@@ -20,6 +20,7 @@ import {ItalicCommand} from "./commands/ItalicCommand.js";
 import {UnderlineCommand} from "./commands/UnderlineCommand.js";
 import {LineThroughCommand} from "./commands/LineThroughCommand.js";
 import {TextLeftCommand} from "./commands/TextLeftCommand.js";
+import {TextCenterCommand} from "./commands/TextCenterCommand.js";
 
 const menuBar = new MenuBar();
 const textArea = new TextArea();
@@ -217,6 +218,14 @@ const textLeftCommand = new TextLeftCommand(targetElement);
 
 textLeftButton.addEventListener("click", () => {
     textLeftCommand.execute("left");
+})
+
+// Text Center Command
+const textCenterButton = document.getElementById("centerButtonID");
+const textCenterCommand = new TextCenterCommand(targetElement);
+
+textCenterButton.addEventListener("click", () => {
+    textCenterCommand.execute("center");
 })
 
 // Text Area Panel
