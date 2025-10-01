@@ -173,10 +173,19 @@ const underlineButton = document.getElementById("underlineButtonID");
 const underlineCommand = new UnderlineCommand(targetElement);
 
 underlineButton.addEventListener("click", () => {
-    if (targetElement.style.textDecoration !== "underline") {
-        underlineCommand.execute("underline");
+    const current = targetElement.style.textDecoration;
+
+    const hasUnderline = current.includes("underline");
+    const hasLineThrough = current.includes("line-through");
+
+    if (!hasLineThrough && !hasUnderline) {
+        lineThroughCommand.execute("underline");
+    } else if (hasLineThrough && !hasUnderline) {
+        lineThroughCommand.execute("underline line-through");
+    } else if (hasLineThrough && hasUnderline) {
+        lineThroughCommand.execute("line-through");
     } else {
-        targetElement.style.textDecoration = "none";
+        lineThroughCommand.execute("none");
     }
 })
 
