@@ -22,6 +22,7 @@ import {LineThroughCommand} from "./commands/LineThroughCommand.js";
 import {TextLeftCommand} from "./commands/TextLeftCommand.js";
 import {TextCenterCommand} from "./commands/TextCenterCommand.js";
 import {TextRightCommand} from "./commands/TextRightCommand.js";
+import {TextJustifyCommand} from "./commands/TextJustifyCommand.js";
 
 const menuBar = new MenuBar();
 const textArea = new TextArea();
@@ -235,6 +236,14 @@ const textRightCommand = new TextRightCommand(targetElement);
 
 textRightButton.addEventListener("click", () => {
     textRightCommand.execute("right");
+})
+
+// Text Justify Command
+const textJustifyButton = document.getElementById("justifyButtonID");
+const textJustifyCommand = new TextJustifyCommand(targetElement);
+
+textJustifyButton.addEventListener("click", () => {
+    textJustifyCommand.execute("justify");
 })
 
 // Text Area Panel
