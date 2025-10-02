@@ -9,6 +9,14 @@ export class InstrumentsTab extends AbstractInstrumentsTab {
 
     render() {
         const tabPanel = document.createElement("div");
+        document.getElementById("home-tab").addEventListener("click", () => {
+            tabPanel.className = "tab-pane fade d-flex flex-row";
+            document.getElementById("insert-tab-pane").className = "tab-pane fade";
+        });
+        document.getElementById("insert-tab").addEventListener("click", () => {
+            tabPanel.className = "tab-pane fade d-flex flex-row";
+            document.getElementById("home-tab-pane").className = "tab-pane fade";
+        })
         tabPanel.className = "tab-pane fade d-flex flex-row";
         tabPanel.id = this.tabID + "-pane";
         tabPanel.setAttribute("role", "tabpanel");
