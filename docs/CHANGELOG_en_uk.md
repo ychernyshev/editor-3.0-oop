@@ -183,3 +183,15 @@ All notable changes to this project will be documented in this file.
 - Виправлено баг у властивості `text-decoration`: замінено `"normal"` на `"none"`
 - Уточнено логіку: тепер команда перевіряє, чи містить `text-decoration` `"line-through"`. Якщо так — `"underline"` додається або видаляється окремо, а `"line-through"` залишається активним. Відповідальність за `"line-through"` делеговано до `LineThroughCommand`
 - Увімкнено перенесення слів у `TextArea`
+
+## [v0.1.6] - 2025-10-02
+
+### Changes
+
+- ## [v0.1.5] - 2025-10-01
+
+All instrument tabs are on one line, not in two rows. Fixed `"d-flex flex-row"` issue, when these classes are in two instrument tabs at one time, these tabs are in two lines, like two flex rows. So, fixing removes `"d-flex flex-row"` in the instruments tab that hides at the time, and is in the instrument tab that shows at the time
+
+### Виправлено
+
+Усі вкладки інструментів розташовані в одному рядку, а не у двох рядках. Виправлено проблему `"d-flex flex-row"`, коли ці класи одночасно знаходяться у двох вкладках інструментів, ці вкладки розташовані у двох рядках, наче два рядки flex. Отже, виправлення видаляє `"d-flex flex-row"` на вкладці інструментів, яка на той момент приховується, і знаходиться на вкладці інструментів, яка на той момент відображається.
