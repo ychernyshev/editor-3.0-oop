@@ -47,7 +47,7 @@ export class TableCreator {
 
     createOpenButton() {
         const openTableCratingModal = document.createElement('button');
-        openTableCratingModal.className = "btn btn-primary";
+        openTableCratingModal.className = "btn btn-light";
         openTableCratingModal.setAttribute("data-bs-toggle", "modal");
         openTableCratingModal.setAttribute("data-bs-target", "#tableCreatingModal");
         openTableCratingModal.innerHTML = this.createTableIcon();
