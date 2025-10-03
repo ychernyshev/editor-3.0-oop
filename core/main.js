@@ -267,6 +267,7 @@ const setBackgroundCommand = new BackgroundColorCommand(targetElement);
 
 setBackgroundColorList.addEventListener("change", (e) => {
     setBackgroundCommand.execute(e.target.value);
+    setBackgroundColorList.style.backgroundColor = e.target.value;
 });
 
 // Text Area Panel
