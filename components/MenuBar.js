@@ -27,7 +27,8 @@ export class MenuBar extends AbstractUIPaneComponent{
         containerBody.style.height = "2.5rem";
         containerBody.className = "col-12 bg-light p-2 d-flex flex-row align-items-center";
         containerBody.id = "menuItemsContainer";
-        containerBody.innerHTML = "<h6 class=''>Editor 3 OOP</h6>"
+        containerBody.innerHTML = "<h5 class='col-1 my-auto text-center text-secondary' style='font-weight: 400'>Editor 3 OOP</h5>"
+        containerBody.style.fontWeight = "700";
 
         const tabContent = this.createTabContent();
         const buttonListContainer = this.createButtonListContainer()
