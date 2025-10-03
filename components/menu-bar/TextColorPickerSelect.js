@@ -18,7 +18,7 @@ export class TextColorPickerSelect extends AbstractInstrumentSelect{
             const option = document.createElement("option");
             option.style.backgroundColor = color;
             option.value = color;
-            option.textContent = color;
+            option.textContent = "Text";
             select.appendChild(option);
         })
 
