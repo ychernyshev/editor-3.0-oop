@@ -188,10 +188,38 @@ All notable changes to this project will be documented in this file.
 
 ### Changes
 
-- ## [v0.1.5] - 2025-10-01
-
 All instrument tabs are on one line, not in two rows. Fixed `"d-flex flex-row"` issue, when these classes are in two instrument tabs at one time, these tabs are in two lines, like two flex rows. So, fixing removes `"d-flex flex-row"` in the instruments tab that hides at the time, and is in the instrument tab that shows at the time
 
 ### Виправлено
 
 Усі вкладки інструментів розташовані в одному рядку, а не у двох рядках. Виправлено проблему `"d-flex flex-row"`, коли ці класи одночасно знаходяться у двох вкладках інструментів, ці вкладки розташовані у двох рядках, наче два рядки flex. Отже, виправлення видаляє `"d-flex flex-row"` на вкладці інструментів, яка на той момент приховується, і знаходиться на вкладці інструментів, яка на той момент відображається.
+
+---
+
+## [v0.1.7] - 2025-10-03
+
+### Added
+- Background color toggle functionality
+- Color picker for text styling and text color toggle functionality
+- Background Color Picker has a name now to identify the background color picker
+
+### Updated
+- Background color toggle now also sets the background of the `<select>` element alongside the Text Area
+- Table creator button now has a new background color: `#F8F9FA`
+- `Editor 3.0 OOP` logo is now horizontally and vertically centered
+- Logo styled with light gray color
+- Tab text updated to `font-weight: 700` for improved readability
+
+### Додано
+- Функціональність перемикання кольору тла 
+- Пікер кольору для стилізації тексту та функціональність перемикання кольору тексту
+- Вибір кольору фону тепер має назву для ідентифікації засобу вибору кольору фону
+
+### Оновлено
+- Перемикач кольору тла тепер також змінює фон елемента `<select>` разом із тлом текстової області
+- Кнопка створення таблиці отримала новий фон: `#F8F9FA`
+- Логотип `Editor 3.0 OOP` вирівняно по горизонталі та вертикалі
+- Логотип стилізовано світло-сірим кольором
+- Текст вкладок отримав стиль `font-weight: 700` для покращеної читабельності
+
+---
