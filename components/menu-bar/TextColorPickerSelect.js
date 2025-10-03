@@ -1,6 +1,6 @@
 import {AbstractInstrumentSelect} from "../abstract/menu-bar/AbstractInstrumentSelect.js";
 
-export class ColorPickerSelect extends AbstractInstrumentSelect {
+export class TextColorPickerSelect extends AbstractInstrumentSelect{
     constructor(colour) {
         super();
         this.colour = colour;
@@ -11,8 +11,8 @@ export class ColorPickerSelect extends AbstractInstrumentSelect {
         const select = document.createElement("select");
 
         select.className = "form-control text-secondary";
-        select.id = "setBackgroundColor";
-        select.setAttribute("name", "BgColors");
+        select.id = "setTextColor";
+        select.setAttribute("name", "TextColors");
 
         this.colour.forEach(color => {
             const option = document.createElement("option");

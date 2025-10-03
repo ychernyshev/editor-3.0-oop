@@ -71,7 +71,7 @@ All notable changes to this project will be documented in this file.
 - **Text Alignment Buttons**:
   - `Left`, `Center`, `Right`, `Justify` — rendered with SVG icons using the `code` property
 - **Color Picker Select Menu**:
-  - Dropdown menu with visual color options via `ColorPickerSelect`
+  - Dropdown menu with visual color options via `BackgroundColorPickerSelect`
 - **Font Family & Size Appearance**:
   - Font family and size selectors now display actual styles
   - Added new font sizes: `8px`, `10px`
@@ -101,7 +101,7 @@ All notable changes to this project will be documented in this file.
 - **Кнопки вирівнювання тексту**:
   - `Left`, `Center`, `Right`, `Justify` — з SVG-іконками через властивість `code`
 - **Меню вибору кольору**:
-  - Випадаючий список кольорів з візуалізацією через `ColorPickerSelect`
+  - Випадаючий список кольорів з візуалізацією через `BackgroundColorPickerSelect`
 - **Відображення шрифтів і розмірів**:
   - Селектори `fontFamily` та `fontSize` тепер показують реальний стиль
   - Додано нові розміри шрифтів: `8px`, `10px`

@@ -6,7 +6,8 @@ import {InstrumentsTab} from "../components/menu-bar/InstrumentsTab.js";
 // home-tab-pane
 import {InstrumentSelect} from "../components/menu-bar/InstrumentSelect.js";
 import {InstrumentButton} from "../components/buttons/InstrumentButton.js";
-import {ColorPickerSelect} from "../components/menu-bar/ColorPickerSelect.js";
+import {BackgroundColorPickerSelect} from "../components/menu-bar/BackgroundColorPickerSelect.js";
+import {TextColorPickerSelect} from "../components/menu-bar/TextColorPickerSelect.js";
 
 // insert-tab-pane
 import {TableCreator} from "../components/menu-bar/TableCreator.js";
@@ -128,7 +129,12 @@ const colorPicker = [
 ]
 
 colorPicker.forEach(color => {
-    const picker = new ColorPickerSelect(color.colour);
+    const picker = new BackgroundColorPickerSelect(color.colour);
+    picker.render();
+})
+
+colorPicker.forEach(color => {
+    const picker = new TextColorPickerSelect(color.colour);
     picker.render();
 })
 
@@ -261,13 +267,16 @@ clearBtn.addEventListener("click", () => {
     targetElement.textContent = plainText;
 });
 
-// Color Picker Command
+// Color Picker Command [Background]
 const setBackgroundColorList = document.getElementById("setBackgroundColor");
-const setBackgroundCommand = new BackgroundColorCommand(targetElement);
+const setColorCommand = new BackgroundColorCommand(targetElement);
 
 setBackgroundColorList.addEventListener("change", (e) => {
-    setBackgroundCommand.execute(e.target.value);
+    setColorCommand.execute(e.target.value);
     setBackgroundColorList.style.backgroundColor = e.target.value;
 });
+
+// Color Picker Command [Text]
+const textColorList = document.getElementById("");
 
 // Text Area Panel
