@@ -18,7 +18,7 @@ export class BackgroundColorPickerSelect extends AbstractInstrumentSelect {
             const option = document.createElement("option");
             option.style.backgroundColor = color;
             option.value = color;
-            option.textContent = color;
+            option.textContent = "BG";
             select.appendChild(option);
         })
 
