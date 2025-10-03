@@ -11,6 +11,8 @@ export class ColorPickerSelect extends AbstractInstrumentSelect {
         const select = document.createElement("select");
 
         select.className = "form-control text-secondary";
+        select.id = "setBackgroundColor";
+        select.setAttribute("name", "BgColors");
 
         this.colour.forEach(color => {
             const option = document.createElement("option");
