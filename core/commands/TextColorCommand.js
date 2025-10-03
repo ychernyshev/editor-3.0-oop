@@ -5,7 +5,7 @@ export class TextColorCommand{
 
     execute(textColor) {
         if(this.target) {
-            this.target.style.colour = textColor;
+            this.target.style.setProperty("color", textColor, "important");
         }
     }
 }

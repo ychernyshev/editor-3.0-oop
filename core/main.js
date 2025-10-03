@@ -25,6 +25,7 @@ import {TextCenterCommand} from "./commands/TextCenterCommand.js";
 import {TextRightCommand} from "./commands/TextRightCommand.js";
 import {TextJustifyCommand} from "./commands/TextJustifyCommand.js";
 import {BackgroundColorCommand} from "./commands/BackgroundColorCommand.js";
+import {TextColorCommand} from "./commands/TextColorCommand.js";
 
 const menuBar = new MenuBar();
 const textArea = new TextArea();
@@ -277,6 +278,12 @@ setBackgroundColorList.addEventListener("change", (e) => {
 });
 
 // Color Picker Command [Text]
-const textColorList = document.getElementById("");
+const setTextColorList = document.getElementById("setTextColor");
+const setTextColorCommand = new TextColorCommand(targetElement);
+
+setTextColorList.addEventListener("change", (e) => {
+    setTextColorCommand.execute(e.target.value);
+    setTextColorList.style.backgroundColor = e.target.value;
+})
 
 // Text Area Panel
