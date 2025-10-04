@@ -223,3 +223,12 @@ All instrument tabs are on one line, not in two rows. Fixed `"d-flex flex-row"` 
 - Текст вкладок отримав стиль `font-weight: 700` для покращеної читабельності
 
 ---
+
+## [v0.1.8] - 2025-10-04
+
+### Added
+The table creation functionality with dynamic border styling
+
+### Додано
+
+Додано функціональність створення таблиці з динамічними стилями меж
