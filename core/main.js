@@ -26,6 +26,7 @@ import {TextRightCommand} from "./commands/TextRightCommand.js";
 import {TextJustifyCommand} from "./commands/TextJustifyCommand.js";
 import {BackgroundColorCommand} from "./commands/BackgroundColorCommand.js";
 import {TextColorCommand} from "./commands/TextColorCommand.js";
+import {CreateTableCommand} from "./commands/CreateTableCommand.js";
 
 const menuBar = new MenuBar();
 const textArea = new TextArea();
@@ -285,5 +286,31 @@ setTextColorList.addEventListener("change", (e) => {
     setTextColorCommand.execute(e.target.value);
     setTextColorList.style.backgroundColor = e.target.value;
 })
+
+// Table Create Command
+document.getElementById("buttonCreate").addEventListener("click", () => {
+    const inputs = document.querySelectorAll("#modalBody input");
+    const values = Array.from(inputs).map(input => input.value);
+
+    const [trCount, tdCount, tdWidth, tdHeight, borderWidth, borderStyle, borderColor] = values;
+
+    const targetElement = document.getElementById("textArea");
+
+    const command = new CreateTableCommand(
+        targetElement,
+        parseInt(trCount),
+        parseInt(tdCount),
+        parseInt(tdWidth),
+        parseInt(tdHeight),
+        parseInt(borderWidth),
+        borderStyle,
+        borderColor
+    );
+
+    command.execute();
+});
+
+
+
 
 // Text Area Panel
