@@ -155,17 +155,70 @@ export class TableCreator {
     }
 
     createTableTD() {
-        const fields = ["Count TR", "Count TD", "Width of TD", "Height of TD", "Width of border", "Style of border", "Color of border"];
+        const fields = [
+            {label: "Count TR", type: "input"},
+            {label: "Count TD", type: "input"},
+            {label: "Width of TD", type: "input"},
+            {label: "Height of TD", type: "input"},
+            {label: "Width of border", type: "input"},
+            {
+                label: "Style of border",
+                type: "select",
+                options: ["dotted", "dashed", "solid", "double", "groove", "ridge", "inset", "outset"]
+            },
+            {label: "Color of border", type: "input"}
+        ];
 
         return fields.map(field => {
-          const td = document.createElement("td");
-          td.innerText = field;
+            const td = document.createElement("td");
+            td.innerText = field.label;
 
-          const input = document.createElement("input");
-          input.className = "form-control";
+            let control;
 
-          td.appendChild(input);
-          return td;
-        })
+            if (field.type === "select") {
+                control = document.createElement("select");
+                control.className = "form-select";
+
+                field.options.forEach(style => {
+                    const option = document.createElement("option");
+                    option.value = style;
+                    option.innerText = style;
+                    control.appendChild(option);
+                });
+            } else {
+                control = document.createElement("input");
+                control.className = "form-control";
+            }
+
+            td.appendChild(control);
+            return td;
+        });
     }
+
+
+    // createTableTD() {
+    //     const fields = ["Count TR", "Count TD", "Width of TD", "Height of TD", "Width of border", "Style of border", "Color of border"];
+    //     const styleBorder = ["dotted", "dashed", "solid", "double", "groove", "ridge", "inset", "outset"];
+    //
+    //     const select = document.createElement("select");
+    //
+    //
+    //     return fields.map(field => {
+    //         const td = document.createElement("td");
+    //         td.innerText = field;
+    //
+    //         const input = document.createElement("input");
+    //         input.className = "form-control";
+    //
+    //         styleBorder.map(style => {
+    //             const option = document.createElement("option");
+    //             option.innerText = style;
+    //
+    //             return select.appendChild(option);
+    //         })
+    //
+    //         td.appendChild(input);
+    //         return td;
+    //     })
+    // }
 }

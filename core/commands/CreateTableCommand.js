@@ -22,6 +22,7 @@ export class CreateTableCommand{
             td.style.width = this.tdWidth + "px";
             td.style.height = this.tdHeight + "px";
             td.style.border = `${this.tableBorderWith}px ${this.tableBorderStyle} #${this.tableBorderColor}`;
+            console.log(`${this.tableBorderWith}px ${this.tableBorderStyle} #${this.tableBorderColor}`);
             td.innerText = "text";
 
             tr.appendChild(td);
